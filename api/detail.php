@@ -268,7 +268,20 @@ $logs = isset($monitor['logs']) ? $monitor['logs'] : [];
                                         }
                                         ?>
                                     </td>
-                                    <td class="mdc-data-table__cell"><?php echo $log['reason'] ?? '-'; ?></td>
+                                    <td class="mdc-data-table__cell">
+                                        <?php
+                                        if (isset($log['reason'])) {
+                                            if (is_array($log['reason'])) {
+                                                // 优先显示详细信息
+                                                echo $log['reason']['detail'] ?? json_encode($log['reason']);
+                                            } else {
+                                                echo $log['reason'];
+                                            }
+                                        } else {
+                                            echo '-';
+                                        }
+                                        ?>
+                                    </td>
                                 </tr>
                                 <?php endforeach; ?>
                                 <?php endif; ?>
