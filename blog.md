@@ -42,13 +42,13 @@
 
 - 首先，去官网 [UptimeRobot 注册](https://dashboard.uptimerobot.com/sign-up) 注册一个账号，使用邮箱即可完成注册。
 
-![使用 UptimeRobot 对网站和服务器实时监控](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/8894132/20250512-2eb02d25.png?x-cos-security-token=3SX3PPDTOf91UeS5OoC7ySRDCMeHBR6a7a985bcccfd5559b247a350b93b19de7EzjO-X6QG-8k95XW-8XU-7tfnj5zbOleSrX0iDgkYXw1YLdv_nasZgnu5ZqHWQfxU_LLEjnWYdH7jIismy9A1jLgMHEyAJnuqBlPtSzC5hO3XpCnPvkoWM5LrmZ3cRANxSKpPOJEx0VGd1GgoYbu-3_uxy3tjUsnO7AuwhBuOBjf-DYAO-H2aUpGTphxYoa3XTWS5Dgg0nztVNLv2aAPQU_kSzsV2hvY-xIWVhAeyq_jOJEbSa5Yk-XmHhVvzbViuqzABmYSCgbnG8px3u4QKHa1F50UbpPu1IyBkre1Jxll6SyNmZuT28a2IgetZxJNnWqii6EV4J7c0eWnCO-ZezOo5GVZkToR3Q3D6tDt6DTMg2VJvcGujWRMcVlO3q8Z9M0_21jpyJRQojF0KMqC9w&q-sign-algorithm=sha1&q-ak=AKIDABAbHCXgI3PvvLs5bFsLN488FOQvdcibnpAAzOHRqjA4qgxtM6eCMmgHPkUjyk39&q-sign-time=1747064642%3B1747065242&q-key-time=1747064642%3B1747065242&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=0aa7c7aa8200967d3b8154db3745b6e17c536804&qc_blockWidth=769&qc_blockHeight=403)
+![使用 UptimeRobot 对网站和服务器实时监控](https://cdn.jsdelivr.net/gh/miloce/uptime-monitor/img/1.png)
 
-![使用 UptimeRobot 对网站和服务器实时监控](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/8894132/20250512-1d640412.png?x-cos-security-token=OWhQ47A24OlizQSI1qQ3Jim9I2eNryMa8b22dd1844094596e749ef932105ecd3UCrZHMH8AEAGo-blWj1qdVA-lxUXy9vaRubmi4KAnq-kSc4yXSGKv5n1OAwIc2q68QzHVMfAcbazIl_wGv3ZK0JW_iGoUXa6jryGa3gpLJlYviHgvgrdLw5msdMt9iWYYBH324vlVS_VbsKGBaLTz2RyYyBNRvmOiD7thJUTcNgxc5WX2AYiClMIgCHx0kbEqCE5VetvItMO-_FXX3nFdU5czOH2L0nlJxYu_wl0ENMLmQtMxykGyhBMLvp62A1JfK7fmPsQblnRIok4_AEmAeMUKIuYqbiU3k8XFPe0au65c8DgOSsJZaiDsfNLM_eyIZHLWtz5Djma31W1s13hz_p0t2RYahs1zt89ovz5uJ6T3cOILkYa52Brh9jhFD4r4Vtp5gXdTZ9k1PftFdXIeA&q-sign-algorithm=sha1&q-ak=AKID5UamVPbRpggqOEYJpK87G5ZJhs5tHRdtcK58KIsu8lI6pBUEGOC5y5UPYZyOLpVz&q-sign-time=1747064642%3B1747065242&q-key-time=1747064642%3B1747065242&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=a4602bcd2ce310e0fcad8b29af5a41b3b49815bc&qc_blockWidth=769&qc_blockHeight=403)
+![使用 UptimeRobot 对网站和服务器实时监控](https://cdn.jsdelivr.net/gh/miloce/uptime-monitor/img/2.png)
 
 - 注册完成之后登录，然后点击[**Dashboard**](https://dashboard.uptimerobot.com/)，进入仪表盘。
 
-![请在此添加图片描述](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/8894132/20250512-da2b47e6.png?x-cos-security-token=3SX3PPDTOf91UeS5OoC7ySRDCMeHBR6a8e0011afe1c99a0f5d0c659224b850d0EzjO-X6QG-8k95XW-8XU-7tfnj5zbOleSrX0iDgkYXw1YLdv_nasZgnu5ZqHWQfxU_LLEjnWYdH7jIismy9A1jLgMHEyAJnuqBlPtSzC5hO3XpCnPvkoWM5LrmZ3cRANxSKpPOJEx0VGd1GgoYbu-3_uxy3tjUsnO7AuwhBuOBjf-DYAO-H2aUpGTphxYoa3XTWS5Dgg0nztVNLv2aAPQVfhfnwhB0vmvlvE9nU5o3xxeV81p4_zTbVGQlF72s9RnYDEQd_It_GARig42LD8OW0pWzGl7_lBmOYxR-IrzDPAgU11xQ43x4aGq6ZO7eX4GBEp8PscDhqHxt1Ok-biFfldZk3HIm6waqQM52uzqhlsV-PdMhRTYETKl9TMsbxVJW60ue1CrR7EK6yhKxbgpA&q-sign-algorithm=sha1&q-ak=AKID-dvKYRYdKVvNRKBhNNfhGIh1mBqfKe4Xxz3udcBMHA-U59-DczfhuC1pM55XhQeC&q-sign-time=1747064642%3B1747065242&q-key-time=1747064642%3B1747065242&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=8e7029c2c1068a6ddfd33a1d2041dae7bd9d6e51&qc_blockWidth=769&qc_blockHeight=385)
+![使用 UptimeRobot 对网站和服务器实时监控](https://cdn.jsdelivr.net/gh/miloce/uptime-monitor/img/3.png)
 
 - 点击右上方 **New Monitor**，开始设置监控。
 
@@ -56,9 +56,9 @@
 
 - 填写监控种类、监控站点以及监控频率，注意勾选提醒邮箱。
 
-![使用 UptimeRobot 对网站和服务器实时监控](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/8894132/20250512-11f01ebc.png?x-cos-security-token=OWhQ47A24OlizQSI1qQ3Jim9I2eNryMa932872c8f95f0739fc2ee57232bd040bUCrZHMH8AEAGo-blWj1qdVA-lxUXy9vaRubmi4KAnq-kSc4yXSGKv5n1OAwIc2q68QzHVMfAcbazIl_wGv3ZK0JW_iGoUXa6jryGa3gpLJlYviHgvgrdLw5msdMt9iWYYBH324vlVS_VbsKGBaLTz2RyYyBNRvmOiD7thJUTcNgxc5WX2AYiClMIgCHx0kbEqCE5VetvItMO-_FXX3nFdWDrR2l5bAP2dhlZnXTsjd4zrOE6ko436bTWe5EnDRnnSq9h1tr8kpePsUqVnTDil8yHwmQOKLvKA9Cz7l_qJ-CuFO9dcTxr6Lv8eyDcbQv4kcx7by_XFAT6gMBuz3QP7ScztwdWoMUbQlfQaosQG52a9x5JHBFQJqTRRCeLX6JmJFsFkbDc-f7CrpAbKzoVTg&q-sign-algorithm=sha1&q-ak=AKIDisYrgSddm-fLy_jn16oa-airkT1FFa445IzCzUcUFJAsb4oEt4K9ak4ffG_nkfLg&q-sign-time=1747064642%3B1747065242&q-key-time=1747064642%3B1747065242&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=90c5c3cb15bf959b9a8b20775f02399041cef821&qc_blockWidth=769&qc_blockHeight=399)
+![使用 UptimeRobot 对网站和服务器实时监控](https://cdn.jsdelivr.net/gh/miloce/uptime-monitor/img/4.png)
 
-![使用 UptimeRobot 对网站和服务器实时监控](https://developer-private-1258344699.cos.ap-guangzhou.myqcloud.com/column/article/8894132/20250512-9f1d318c.png?x-cos-security-token=OWhQ47A24OlizQSI1qQ3Jim9I2eNryMaba0cb62dda7da71eee55e8a4412dd93fUCrZHMH8AEAGo-blWj1qdVA-lxUXy9vaRubmi4KAnq-kSc4yXSGKv5n1OAwIc2q68QzHVMfAcbazIl_wGv3ZK0JW_iGoUXa6jryGa3gpLJlYviHgvgrdLw5msdMt9iWYYBH324vlVS_VbsKGBaLTz2RyYyBNRvmOiD7thJUTcNgxc5WX2AYiClMIgCHx0kbEqCE5VetvItMO-_FXX3nFddvRRkjletWBNIc4ajvHAZHYuFOqIyRrx798EzWFYMuNtaMWFfWBvC7coWW_tTjH2iWV53-7CI-JythHuFoJ3HOqHSRd5U-BGvGauY3h4Pylxp6clKPheyE77zbZYs_DPoVyzbw4cJQl-woRparxNgWoPpBEbzTd_jkw3FyftfLmk_zUTyR7dxO1qiQNTiOviw&q-sign-altorithm=sha1&q-ak=AKIDIOe-0dYp1PaZMyW7d53_Vp5bXIm0kSo29PXm9CRzxNPiAIf6oK3hVSyJjs2bwXTs&q-sign-time=1747064642%3B1747065242&q-key-time=1747064642%3B1747065242&q-header-list=host&q-url-param-list=x-cos-security-token&q-signature=e4a79579f20e43aa7305b3fb72e9c23f98fba858&qc_blockWidth=769&qc_blockHeight=401)
+![使用 UptimeRobot 对网站和服务器实时监控](https://cdn.jsdelivr.net/gh/miloce/uptime-monitor/img/5.png)
 
 ## 部署指南
 
