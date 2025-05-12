@@ -1,0 +1,16 @@
+{
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.6.0"
+    }
+  },
+  "routes": [
+    { "src": "/(css|js|img)/(.*)", "dest": "/$1/$2" },
+    { "src": "/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ],
+  "env": {
+    "NOW_PHP_DEBUG": "1"
+  }
+} 

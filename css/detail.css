@@ -1,0 +1,183 @@
+/* 监控详情页样式 */
+
+.detail-card {
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.detail-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.detail-header .monitor-status {
+    width: 16px;
+    height: 16px;
+    margin-right: 16px;
+}
+
+.detail-header h2 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* 详情信息网格 */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.info-label {
+    font-size: 0.875rem;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 8px;
+}
+
+.info-value {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* 状态文本颜色 */
+.status-text-up {
+    color: var(--status-up-color);
+}
+
+.status-text-down {
+    color: var(--status-down-color);
+}
+
+.status-text-paused {
+    color: var(--status-paused-color);
+}
+
+.status-text-checking {
+    color: var(--status-checking-color);
+}
+
+.status-text-unknown, .status-text-seems {
+    color: var(--status-unknown-color);
+}
+
+/* 可用率图表 */
+.detail-uptime {
+    margin-bottom: 32px;
+}
+
+.detail-uptime h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.uptime-chart {
+    display: flex;
+    align-items: flex-end;
+    height: 200px;
+}
+
+.uptime-bars.detailed {
+    flex-grow: 1;
+    height: 100%;
+    gap: 4px;
+}
+
+.uptime-bars.detailed .uptime-bar {
+    min-height: 1px;
+    border-radius: 2px 2px 0 0;
+}
+
+.uptime-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-left: 12px;
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* 响应时间图表 */
+.detail-response-time {
+    margin-bottom: 32px;
+}
+
+.detail-response-time h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.response-chart {
+    height: 300px;
+}
+
+/* 日志卡片 */
+.logs-card {
+    padding: 24px;
+}
+
+.logs-card h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/* 日志类型标签 */
+.log-type {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.log-type-2 {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: var(--status-up-color);
+}
+
+.log-type-1 {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: var(--status-down-color);
+}
+
+/* 数据表格样式 */
+.mdc-data-table {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.mdc-data-table__header-cell {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .detail-header .monitor-status {
+        margin-bottom: 12px;
+    }
+    
+    .detail-header h2 {
+        margin-bottom: 12px;
+    }
+} 

@@ -1,0 +1,25 @@
+# 缓存目录
+/cache/
+
+# IDE文件
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log
+
+# 环境变量
+.env
+
+# Vercel
+.vercel/
+
+# 依赖目录
+/vendor/
+/node_modules/ 
