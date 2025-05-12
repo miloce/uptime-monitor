@@ -10,6 +10,15 @@ if ($requestUri === '/api/' || $requestUri === '/api') {
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/api_functions.php';
 
+// 检查必要的配置
+if (empty($config['api_keys'][0])) {
+    if ($config['environment']['is_vercel']) {
+        die('错误：请在Vercel环境变量中设置 UPTIMEROBOT_API_KEY');
+    } else {
+        die('错误：请在config.php中设置 api_keys');
+    }
+}
+
 // 获取监控数据
 $monitors = getMonitors($config['api_keys']);
 ?>

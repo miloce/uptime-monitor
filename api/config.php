@@ -1,12 +1,29 @@
 <?php
+// 检测是否在Vercel环境中运行
+function isVercelEnvironment() {
+    return isset($_SERVER['VERCEL']) || isset($_SERVER['NOW_REGION']);
+}
+
+// 获取配置值，优先使用环境变量
+function getConfigValue($key, $default = '') {
+    // Vercel环境下优先使用环境变量
+    if (isVercelEnvironment()) {
+        $value = getenv($key);
+        if ($value !== false) {
+            return $value;
+        }
+    }
+    return $default;
+}
+
 // 网站配置
 $config = [
     // 网站名称 - 支持环境变量
-    'site_name' => getenv('SITE_NAME') ?: 'Uptime Monitor',
+    'site_name' => getConfigValue('SITE_NAME', 'Uptime Monitor'),
     
     // UptimeRobot API Keys - 支持环境变量
     'api_keys' => [
-        getenv('UPTIMEROBOT_API_KEY') ?: '',  // API密钥
+        getConfigValue('UPTIMEROBOT_API_KEY', ''),  // API密钥
     ],
     
     // 显示的日志天数
@@ -32,5 +49,11 @@ $config = [
         'endpoint' => 'https://api.uptimerobot.com/v2/',
         'format' => 'json',
         'timeout' => 10, // 请求超时时间（秒）
+    ],
+    
+    // 运行环境信息
+    'environment' => [
+        'is_vercel' => isVercelEnvironment(),
+        'debug' => false, // 是否开启调试模式
     ]
 ]; 
