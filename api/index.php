@@ -1,8 +1,17 @@
 <?php
-// 检查是否请求API文档页面
+// 检查请求的路径
 $requestUri = $_SERVER['REQUEST_URI'] ?? '';
-if ($requestUri === '/api/' || $requestUri === '/api') {
+$parsedUrl = parse_url($requestUri);
+$path = $parsedUrl['path'] ?? '';
+$query = [];
+parse_str($parsedUrl['query'] ?? '', $query);
+
+// 路由处理
+if ($path === '/api/' || $path === '/api') {
     require_once __DIR__ . '/api_docs.php';
+    exit;
+} elseif ($path === '/detail' && isset($query['id'])) {
+    require_once __DIR__ . '/detail.php';
     exit;
 }
 

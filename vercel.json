@@ -8,6 +8,7 @@
     { "src": "/(css|js|img)/(.*)", "dest": "/$1/$2" },
     { "src": "/favicon.ico", "dest": "/favicon.ico" },
     { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/detail", "dest": "/api/detail.php" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ],
   "env": {
