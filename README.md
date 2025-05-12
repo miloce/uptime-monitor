@@ -24,7 +24,7 @@
 1. 克隆项目到本地
 
 ```bash
-git clone https://github.com/yourusername/uptime-monitor.git
+git clone https://github.com/miloce/uptime-monitor.git
 cd uptime-monitor
 ```
 
@@ -58,7 +58,7 @@ php -S localhost:8000
    - 选择你 fork 的项目
    - 点击 "Import"
 
-3. 配置环境变量（可选）
+3. 配置config.php文件
 
 4. 点击 "Deploy"
 
@@ -94,8 +94,8 @@ php -S localhost:8000
 ## API 密钥获取
 
 1. 登录 [UptimeRobot](https://uptimerobot.com/)
-2. 进入 "My Settings"
-3. 在 "API Settings" 部分获取 API Key
+2. 进入 "[My Settings](https://dashboard.uptimerobot.com/integrations)"
+3. 在 "Main API keys" 部分获取 API Key
 
 ## 贡献指南
 

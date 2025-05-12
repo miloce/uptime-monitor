@@ -11,7 +11,27 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 添加卡片波纹效果
     addRippleEffect();
+    
+    // 隐藏加载画面
+    hideLoader();
 });
+
+/**
+ * 隐藏加载画面
+ */
+function hideLoader() {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        // 延迟一小段时间再隐藏，确保页面已完全渲染
+        setTimeout(() => {
+            loader.classList.add('hidden');
+            // 完全隐藏后移除元素
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        }, 300);
+    }
+}
 
 /**
  * 初始化Material Design组件

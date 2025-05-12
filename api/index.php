@@ -25,8 +25,80 @@ $monitors = getMonitors($config['api_keys']);
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- 自定义样式 -->
     <link href="/css/style.css" rel="stylesheet">
+    <style>
+        /* 加载画面样式 */
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .loader {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+        
+        .loader-circle {
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-top-color: #6200ee;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        .loader-inner-circle {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 50px;
+            height: 50px;
+            border: 4px solid transparent;
+            border-top-color: #03dac6;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite reverse;
+        }
+        
+        .loader-text {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 16px;
+            color: #6200ee;
+            white-space: nowrap;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body class="mdc-typography">
+    <!-- 加载画面 -->
+    <div class="loader-container" id="loader">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-inner-circle"></div>
+            <div class="loader-text"><?php echo $config['site_name']; ?> 加载中...</div>
+        </div>
+    </div>
+
     <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
         <div class="mdc-top-app-bar__row">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">

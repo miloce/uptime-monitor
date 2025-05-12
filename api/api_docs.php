@@ -55,9 +55,80 @@ require_once 'config.php';
             margin: 16px 0;
             white-space: pre;
         }
+        
+        /* 加载画面样式 */
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .loader {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+        
+        .loader-circle {
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-top-color: #6200ee;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        .loader-inner-circle {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 50px;
+            height: 50px;
+            border: 4px solid transparent;
+            border-top-color: #03dac6;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite reverse;
+        }
+        
+        .loader-text {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 16px;
+            color: #6200ee;
+            white-space: nowrap;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="mdc-typography">
+    <!-- 加载画面 -->
+    <div class="loader-container" id="loader">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-inner-circle"></div>
+            <div class="loader-text">API文档加载中...</div>
+        </div>
+    </div>
+
     <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
         <div class="mdc-top-app-bar__row">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
@@ -224,5 +295,32 @@ require_once 'config.php';
 
     <!-- Material Design JavaScript -->
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script>
+        // 初始化Material Design组件
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化顶部应用栏
+            const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+            if (topAppBarElement) {
+                const topAppBar = new mdc.topAppBar.MDCTopAppBar(topAppBarElement);
+            }
+            
+            // 初始化按钮
+            const buttons = document.querySelectorAll('.mdc-button');
+            buttons.forEach(button => {
+                new mdc.ripple.MDCRipple(button);
+            });
+            
+            // 隐藏加载画面
+            const loader = document.getElementById('loader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                    }, 500);
+                }, 300);
+            }
+        });
+    </script>
 </body>
 </html> 
