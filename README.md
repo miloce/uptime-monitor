@@ -25,7 +25,6 @@
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/miloce/uptime-monitor&env=UPTIMEROBOT_API_KEY,TOKEN,SITE_NAME)
 
-[Deploy with Vercel](https://vercel.com/new/clone?repository-url=https://github.com/miloce/uptime-monitor&env=UPTIMEROBOT_API_KEY,TOKEN,SITE_NAME)
 
 2. 设置环境变量：
    - `UPTIMEROBOT_API_KEY`：你的UptimeRobot API密钥
