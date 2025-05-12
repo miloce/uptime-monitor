@@ -1,9 +1,5 @@
 /* Material Design 站点监测系统样式 */
 
-html {
-    background-color: var(--mdc-theme-background);
-}
-
 :root {
     --mdc-theme-primary: #3f51b5;
     --mdc-theme-secondary: #ff4081;
@@ -26,10 +22,16 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5;
     min-height: 100vh;
-    background-color: var(--mdc-theme-background);
+    display: flex;
+    flex-direction: column;
     font-family: Roboto, sans-serif;
     color: rgba(0, 0, 0, 0.87);
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 /* 顶部导航栏 */
@@ -213,10 +215,12 @@ body {
 
 /* 页脚 */
 .footer {
-    background-color: var(--mdc-theme-primary);
-    color: var(--mdc-theme-on-primary);
-    padding: 24px 0;
-    margin-top: 48px;
+    flex-shrink: 0;
+    background-color: #3f51b5;
+    color: white;
+    padding: 20px 0;
+    margin-top: auto;
+    width: 100%;
 }
 
 .footer-content {
