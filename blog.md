@@ -3,7 +3,7 @@
 在日常运维或开发中，及时掌握网站健康状态至关重要。本篇文章分享一个基于 UptimeRobot API 开源的站点监控面板，从项目特点、部署方式到实践经验，帮助你快速上手并集成到生产环境。
 
 ---
-
+![使用 UptimeRobot 对网站和服务器实时监控](https://cdn.jsdelivr.net/gh/miloce/uptime-monitor/img/7.png)
 ## 项目简介
 
 本项目采用 PHP + Material Design 前端框架，结合 UptimeRobot API 实现：
@@ -23,7 +23,7 @@
 
 2. **数据可视化**
    - 使用 Chart.js 绘制可用率和响应时间曲线，直观展示历史趋势
-
+![使用 UptimeRobot 对网站和服务器实时监控](https://cdn.jsdelivr.net/gh/miloce/uptime-monitor/img/8.png)
 3. **灵活配置**
    - 环境变量：`UPTIMEROBOT_API_KEY`、`SITE_NAME`
    - `api/config.php`：可自定义 `count_days`、`show_link`、导航菜单等
@@ -33,8 +33,7 @@
 
 5. **日志与加载优化**
    - 加载动画提升用户体验
-   - 数组格式原因优先输出 `detail` 字段，避免警告
-   - 自动检测 Vercel 环境，提供平台友好提示
+![使用 UptimeRobot 对网站和服务器实时监控](https://cdn.jsdelivr.net/gh/miloce/uptime-monitor/img/9.png)
 
 ---
 
