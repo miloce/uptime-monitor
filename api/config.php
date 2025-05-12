@@ -1,13 +1,12 @@
 <?php
 // 网站配置
 $config = [
-    // 网站名称
-    'site_name' => 'Miloce 站点监测',
+    // 网站名称 - 支持环境变量
+    'site_name' => getenv('SITE_NAME') ?: 'Uptime Monitor',
     
-    // UptimeRobot API Keys
-    // 支持 Monitor-Specific 和 Read-Only API Keys
+    // UptimeRobot API Keys - 支持环境变量
     'api_keys' => [
-        'ur1735047-6f378fbcc199a76ccb9b72c2',  //只读 API 密钥
+        getenv('UPTIMEROBOT_API_KEY') ?: '',  // API密钥
     ],
     
     // 显示的日志天数
@@ -20,15 +19,11 @@ $config = [
     'navigation' => [
         [
             'text' => '主页',
-            'url' => 'https://www.luozhinet.com/'
-        ],
-        [
-            'text' => '博客',
-            'url' => 'https://blog.luozhinet.com/'
+            'url' => '/'
         ],
         [
             'text' => 'GitHub',
-            'url' => 'https://github.com/miloce/'
+            'url' => 'https://github.com/miloce/uptime-monitor'
         ],
     ],
     

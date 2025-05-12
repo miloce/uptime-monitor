@@ -19,7 +19,19 @@
 
 ## 快速开始
 
-### 本地开发
+### 方式一：Vercel一键部署（推荐）
+
+1. 点击下方按钮一键部署到Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/miloce/uptime-monitor&env=UPTIMEROBOT_API_KEY,TOKEN,SITE_NAME)
+
+[Deploy with Vercel](https://vercel.com/new/clone?repository-url=https://github.com/miloce/uptime-monitor&env=UPTIMEROBOT_API_KEY,TOKEN,SITE_NAME)
+
+2. 设置环境变量：
+   - `UPTIMEROBOT_API_KEY`：你的UptimeRobot API密钥
+   - `SITE_NAME`：你的站点名称（可选，默认为"Uptime Monitor"）
+
+### 方式二：本地开发
 
 1. 克隆项目到本地
 
@@ -28,14 +40,22 @@ git clone https://github.com/miloce/uptime-monitor.git
 cd uptime-monitor
 ```
 
-2. 修改配置文件
+2. 设置环境变量或修改配置文件
 
-编辑 `config.php` 文件，替换为你自己的 UptimeRobot API Key：
+方法1：设置环境变量
+```bash
+export UPTIMEROBOT_API_KEY="你的API密钥"
+export SITE_NAME="你的站点名称"
+```
 
+方法2：直接修改 `config.php` 文件
 ```php
+// 网站名称
+'site_name' => '你的站点名称',
+
 // UptimeRobot API Keys
 'api_keys' => [
-    'YOUR_API_KEY_HERE',
+    '你的API密钥',
 ],
 ```
 
@@ -47,34 +67,20 @@ php -S localhost:8000
 
 4. 在浏览器中访问 `http://localhost:8000`
 
-### Vercel 部署
-
-1. Fork 本项目到你的 GitHub 账户
-
-2. 在 Vercel 中导入项目
-
-   - 登录 [Vercel](https://vercel.com/)
-   - 点击 "New Project"
-   - 选择你 fork 的项目
-   - 点击 "Import"
-
-3. 配置config.php文件
-
-4. 点击 "Deploy"
-
 ## 配置说明
 
-在 `config.php` 文件中可以进行以下配置：
+支持通过环境变量或配置文件进行配置：
+
+### 环境变量
+
+- `UPTIMEROBOT_API_KEY`：UptimeRobot API密钥（必填）
+- `SITE_NAME`：站点名称（可选）
+
+### 配置文件
+
+在 `config.php` 文件中可以进行更多自定义配置：
 
 ```php
-// 网站名称
-'site_name' => '站点监测',
-
-// UptimeRobot API Keys
-'api_keys' => [
-    'YOUR_API_KEY_HERE',
-],
-
 // 显示的日志天数
 'count_days' => 60,
 
@@ -85,7 +91,7 @@ php -S localhost:8000
 'navigation' => [
     [
         'text' => '主页',
-        'url' => 'https://example.com/'
+        'url' => '/'
     ],
     // ...
 ],
