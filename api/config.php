@@ -1,7 +1,10 @@
 <?php
 // 检测是否在Vercel环境中运行
 function isVercelEnvironment() {
-    return isset($_SERVER['VERCEL']) || isset($_SERVER['NOW_REGION']);
+    // 通过环境变量检测Vercel环境
+    return getenv('VERCEL') !== false
+        || getenv('VERCEL_ENV') !== false
+        || getenv('NOW_REGION') !== false;
 }
 
 // 获取配置值，优先使用环境变量
