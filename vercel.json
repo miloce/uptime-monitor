@@ -2,10 +2,10 @@
   "functions": {
     "api/*.php": {
       "runtime": "vercel-php@0.6.0"
-    },
-    "engines": {
-     "node": ">=18"
-   },
+     },
+  "engines": {
+    "node": ">=18.x"
+  },
   "routes": [
     { "src": "/(css|js|img)/(.*)", "dest": "/$1/$2" },
     { "src": "/favicon.ico", "dest": "/favicon.ico" },
