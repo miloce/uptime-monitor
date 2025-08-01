@@ -2,7 +2,8 @@
   "functions": {
     "api/*.php": {
       "runtime": "vercel-php@0.6.0"
-     },
+    }
+  },
   "engines": {
     "node": ">=18.x"
   },
@@ -16,4 +17,4 @@
   "env": {
     "NOW_PHP_DEBUG": "1"
   }
-} 
+}
