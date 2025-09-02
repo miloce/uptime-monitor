@@ -1,17 +1,23 @@
 {
-  "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.6.0"
-    }
-  },
-  "routes": [
-    { "src": "/(css|js|img)/(.*)", "dest": "/$1/$2" },
-    { "src": "/favicon.ico", "dest": "/favicon.ico" },
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/detail", "dest": "/api/detail.php" },
-    { "src": "/(.*)", "dest": "/api/index.php" }
-  ],
-  "env": {
-    "NOW_PHP_DEBUG": "1"
-  }
+  "函数": {"functions": {
+    "api/*.php": {"api/*.php": {
+      "运行时": "vercel-php@0.6.0""runtime": "vercel-php@0.7.4"
+    }}
+  }},
+  "routes": ["routes": [
+    { 
+  "src": "/(css|js|img)/(.*)",
+  "dest": "/$1/$2"
+}{ "src": "/(css|js|img)/(.*)", "dest": "/$1/$2" },
+    { "src": "/favicon.ico", "dest": "/favicon.ico" },{ "src": "/favicon.ico", "dest": "/favicon.ico" },
+    { 
+  "src": "/api/(.*)",
+  "dest": "/api/$1"
+}{ "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/detail", "dest": "/api/detail.php" }{ "src": "/detail", "dest": "/api/detail.php" },
+    { "src": "/(.*)", "dest": "/api/index.php" }{ "src": "/(.*)", "dest": "/api/index.php" }
+  ]],
+  "env": {"env": {
+    "NOW_PHP_DEBUG": "1""NOW_PHP_DEBUG": "1"
+  }}
 }
